@@ -43,9 +43,19 @@ def detect_covid(file_path):
     predictions = (model.predict(img) > 0.5).astype("int32")
 
     if predictions == 1:
-        print("Normal")
-        Output.insert(END, "Normal")
-        Output.tag_add("center", 1.0, "end")
+        #print("Normal")
+        #Output.insert(END, "Normal")
+        #Output.tag_add("center", 1.0, "end")
+        model2 = load_model('model_adv2_tuberculosis_v_normal.h5')
+        predictions2 = (model2.predict(img) > 0.5).astype("int32")
+        if predictions2 == 0 and predictions==1:
+            print("Normal")
+            Output.insert(END, "Normal")
+            Output.tag_add("center", 1.0, "end")
+        else:
+            print("Tuberculosis")
+            Output.insert(END, "Tuberculosis")
+            Output.tag_add("center", 1.0, "end")
 
     else:
         #print("Covid")
@@ -53,7 +63,7 @@ def detect_covid(file_path):
         #Output.tag_add("center", 1.0, "end")
         model2 = load_model('model_adv2_tuberculosis.h5')
         predictions2 = (model2.predict(img) > 0.5).astype("int32")
-        if predictions2==1:
+        if predictions2==1 and predictions==0:
             print("Tuberculosis")
             Output.insert(END, "Tuberculosis")
             Output.tag_add("center", 1.0, "end")
