@@ -1,0 +1,17 @@
+Below are the dropbox Links to download the Datasets for trainning the CNN models
+
+COVID-19 vs Normal Dataset
+https://www.dropbox.com/scl/fi/rdltpnqj9m0s8y8c55iyp/Covid19.zip?rlkey=mesd9du6wyvmnxninks7sfykv&dl=0 
+
+
+COVID-19 vs Tuberculosis Dataset
+https://www.dropbox.com/scl/fi/ao0vqsktaiz4vf4m46kct/Covid19andTuberculosis.zip?rlkey=g3i0npbtug39t06bt2x4yvpv8&dl=0 
+
+
+Tuberculosis vs Normal Dataset
+
+
+
+The following link is Test Samples which are unseen data for the models and can be used to verify its accuracy. 
+***DO NOT USE THESE IMAGES FOR TRAINING. THESE ARE ONLY FOR EVALUATION PURPOSES***
+Test Data Images: https://www.dropbox.com/scl/fi/0o0f875ol4shzmkpb1g71/TestData.zip?rlkey=h1m9p9bbd9nqs4fe5lkp2nyrb&dl=0 
